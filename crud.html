@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>♡ CRUD with Firebase ♡</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="floating-hearts"></div>
+    
+    <div class="container">
+      <h2>♡ CRUD with Firebase ♡</h2>
+      <div class="cute-divider">★</div>
+      
+      <div class="form">
+        <div class="input-group">
+          <label for="roll">Roll No:</label>
+          <input type="text" name="RollNo" id="roll" placeholder="Enter roll number... ♡" />
+        </div>
+        
+        <div class="input-group">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Enter full name... ♡" />
+        </div>
+        
+        <div class="input-group">
+          <label for="gender">Gender:</label>
+          <input type="text" name="gender" id="gender" placeholder="Enter gender... ♡" />
+        </div>
+        
+        <div class="input-group">
+          <label for="address">Address:</label>
+          <input type="text" name="Address" id="address" placeholder="Enter address... ♡" />
+        </div>
+        
+        <div class="input-group">
+          <label for="Birthday">Birthday:</label>
+          <input type="text" name="Birthday" id="Birthday" placeholder="Enter birthday... ♡" />
+        </div>
+        
+        <div class="input-group">
+          <label for="Zodiac">Zodiac:</label>
+          <input type="text" name="Zodiac" id="Zodiac" placeholder="Enter zodiac sign... ♡" />
+        </div>
+      </div>
+
+          <div class="cute-divider">♡</div>
+
+      <div class="gif-section">
+        <div class="gif-container">
+          <img src="kuromi.gif" alt="Kuromi Dancing" class="cute-gif">
+            <img src="hearts.gif" alt="Hearts Animation" class="cute-gif">
+          <div class="image-placeholder gif-placeholder">
+          </div>
+        </div>
+
+      <div class="cute-divider">♡</div>
+
+      <div class="buttons">
+        <button id="insert" class="btn-insert">
+          <span>Insert ♡</span>
+        </button>
+        <button id="read" class="btn-read">
+          <span>Read ★</span>
+        </button>
+        <button id="update" class="btn-update">
+          <span>Update ♡</span>
+        </button>
+        <button id="delete" class="btn-delete">
+          <span>Delete ★</span>
+        </button>
+      </div>
+    </div>
+    
+    <div id="output" class="output"></div>
+    
+    <div class="nav-link">
+      <a href="index.html">♡ Go to Home / Authentication Page ♡</a>
+      <a href="fetchdatatable.html">♡ Fetch Data Table ♡</a>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="fireConfig.js"></script>
+    <script src="myscript.js"></script>
+    <script src="effects.js"></script>
+  </body>
+</html>

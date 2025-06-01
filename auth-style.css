@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(45deg, #FFE4E1, #FFF0F5, #E6E6FA, #F0F8FF);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease-in-out infinite;
+    color: #8B4513;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.pochaco-float {
+    position: absolute;
+    font-size: 30px;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.pochaco-float:nth-child(1) { 
+    top: 10%; 
+    left: 5%; 
+    animation-delay: 0s; 
+}
+
+.pochaco-float:nth-child(2) { 
+    top: 20%; 
+    right: 10%; 
+    animation-delay: 2s; 
+}
+
+.pochaco-float:nth-child(3) { 
+    top: 60%; 
+    left: 15%; 
+    animation-delay: 4s; 
+}
+
+.pochaco-float:nth-child(4) { 
+    top: 80%; 
+    right: 20%; 
+    animation-delay: 1s; 
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* Authentication Form */
+#authForm {
+    background: rgba(255, 255, 255, 0.95);
+    border: 4px solid #FFB6C1;
+    border-radius: 30px;
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 450px;
+    box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4);
+    position: relative;
+    z-index: 10;
+}
+
+#authForm::before {
+    content: '🐶';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: 3px solid #FFB6C1;
+}
+
+#authForm h2 {
+    color: #8B4513;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+#authForm input {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border: 3px solid #FFB6C1;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: inherit;
+    background: rgba(255, 240, 245, 0.8);
+    transition: all 0.3s ease;
+}
+
+#authForm input:focus {
+    outline: none;
+    border-color: #FF69B4;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+    transform: scale(1.02);
+}
+
+#authForm button {
+    width: 45%;
+    padding: 15px;
+    margin: 15px 2.5%;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#signUpButton {
+    background: linear-gradient(135deg, #FFB6C1, #FF69B4);
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+}
+
+#signInButton {
+    background: linear-gradient(135deg, #DDA0DD, #DA70D6);
+    color: white;
+    box-shadow: 0 5px 15px rgba(218, 112, 214, 0.4);
+}
+
+#authForm button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#authForm a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #FF69B4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+#authForm a:hover {
+    color: #8B4513;
+    transform: scale(1.1);
+}
+
+/* Secret Content */
+#secretContent {
+    display: none;
+}
+
+.header {
+    background: linear-gradient(135deg, #FFB6C1, #FF69B4, #DDA0DD);
+    color: white;
+    padding: 30px 15px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+    position: relative;
+}
+
+.header::before {
+    content: '🐕 ✨ 🐕 ✨ 🐕';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    margin-top: 20px;
+}
+
+.menu {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    border: 3px solid #FFB6C1;
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #87CEEB, #98D8E8);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.menu li::before {
+    content: '🐾';
+    margin-right: 10px;
+}
+
+.menu li:hover {
+    background: linear-gradient(135deg, #4682B4, #5F9EA0);
+    transform: translateX(10px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(70, 130, 180, 0.4);
+}
+
+.main-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 30px;
+    border: 3px solid #DDA0DD;
+    box-shadow: 0 8px 20px rgba(221, 160, 221, 0.3);
+}
+
+.main-content h1 {
+    color: #8B4513;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.main-content p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #8B4513;
+}
+
+.aside {
+    background: linear-gradient(135deg, #87CEEB, #ADD8E6);
+    padding: 25px;
+    color: white;
+    border-radius: 20px;
+    margin: 10px;
+    font-size: 14px;
+    box-shadow: 0 8px 20px rgba(135, 206, 235, 0.4);
+    border: 3px solid #4682B4;
+}
+
+.aside h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.aside h2::after {
+    content: ' 🌟';
+}
+
+.footer {
+    background: linear-gradient(135deg, #DDA0DD, #DA70D6);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 25px;
+    border-radius: 30px 30px 0 0;
+    margin-top: 30px;
+    box-shadow: 0 -8px 25px rgba(218, 112, 214, 0.4);
+}
+
+.footer::before {
+    content: '✨ Made with Pochaco love! ✨';
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#signOutButton {
+    background: linear-gradient(135deg, #FF6347, #FF4500);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+}
+
+#signOutButton:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 99, 71, 0.6);
+}
+
+#signOutButton::before {
+    content: '👋 ';
+}
+
+/* Responsive Grid */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+.city-images {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.city-photo {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.city-photo:hover {
+    transform: scale(1.05);
+}
